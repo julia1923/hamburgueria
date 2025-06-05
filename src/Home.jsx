@@ -58,9 +58,9 @@ function Home() {
         }
     ] //meus produtos
 
+    //Inserção do produto para o carrinho
     const handleBuy = async (product) => {
         try {
-            //Envia o produto para o carrinho
             await api.post('/cart', {
                 name: product.name,
                 price: product.price,
@@ -74,8 +74,6 @@ function Home() {
             alert("Não foi possível adicionar o produto no carrinho.");
         }
     }
-
-    
 
 const showAlert = () => {
   Swal.fire({
@@ -94,7 +92,7 @@ const showAlert = () => {
                 <div className="container">
                     <div className="logo">
                         <img id="logo" src="/img/logo.png" alt="" />
-                        <p id="name-logo">Freitas Burguer</p>
+                        <p id="name-logo">Burguer & Co.</p>
                     </div>
 
                     <nav className="nav">
