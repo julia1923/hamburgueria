@@ -84,6 +84,9 @@ const showAlert = () => {
     background: '#f0f0f0',
     color: '#333',
     confirmButtonColor: '#ffebcd',
+    customClass: {
+    confirmButton: 'swal-confirm-text',
+    }
   });
 };
 

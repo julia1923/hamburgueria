@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.swal-confirm-text {
+    color: chocolate;
+}
+
 @font-face {
     font-family: "anton";
     src: url('./fonts/anton/Anton.ttf') format('truetype');

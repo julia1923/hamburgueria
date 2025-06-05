@@ -134,6 +134,7 @@ table {
     justify-content: space-around;
     min-width: 60px;
     border-radius: 20px;
+    height: 30px;
 
     span {
         margin: 0 10px;
@@ -145,9 +146,10 @@ table {
         background: transparent;
         border: 0;
         font-size: 18px;
+        height: 100%;
 
         &:hover {
-            background: pink;
+            background: rgb(151, 146, 147);
 
         }
     }
