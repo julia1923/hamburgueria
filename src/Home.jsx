@@ -75,6 +75,7 @@ function Home() {
         }
     }
 
+    //Alerta com sweetalert2
 const showAlert = () => {
   Swal.fire({
     title: 'Item adicionado ao carrinho!',
@@ -82,7 +83,7 @@ const showAlert = () => {
     confirmButtonText: 'Ok',
     background: '#f0f0f0',
     color: '#333',
-    confirmButtonColor: '#3085d6',
+    confirmButtonColor: '#ffebcd',
   });
 };
 
