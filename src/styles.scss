@@ -1,0 +1,239 @@
+@import url('https://cdn.boxicons.com/fonts/basic/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    background: #f6f6f6;
+
+    #root {
+        >header {
+            background: white;
+            font-size: 20px;
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'pacifico';
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1; //coloquei o header 'em cima' do main
+
+        }
+
+        >main {
+            background-color: #fffcf9;
+            padding: 0 30px 30px;
+
+            .page-title {
+                font-size: 40px;
+                padding: 50px 0;
+                text-align: center;
+                font-family: 'anton';
+            }
+
+            .content {
+                display: flex;
+
+                section {
+                    flex: 1;
+                }
+
+                aside {
+                    min-width: 320px;
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "anton";
+    src: url('./fonts/anton/Anton.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "pacifico";
+    src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+        tr {
+            border-bottom: 3px solid #ccc;
+        }
+
+        th {
+            font-family: 'anton';
+            letter-spacing: 2px;
+            padding-bottom: 16px;
+            text-align: left;
+            text-transform: uppercase;
+            color: rgb(97, 60, 33);
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 3px solid #ccc;
+
+            &:last-child {
+                border: 0;
+            }
+
+            td {
+                padding: 30px 0;
+            }
+        }
+
+    }
+}
+
+.product {
+    display: flex;
+    align-items: center;
+
+    img {
+        border-radius: 6px;
+    }
+
+    .info {
+        margin-left: 20px;
+
+        .name {
+            font-family: 'anton';
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #666;
+        }
+    }
+
+}
+
+.qty {
+    background-color: #eee;
+    display: inline-flex;
+    padding: 5px 0;
+    justify-content: space-around;
+    min-width: 60px;
+    border-radius: 20px;
+
+    span {
+        margin: 0 10px;
+    }
+
+
+    button {
+        padding: 0 10px;
+        background: transparent;
+        border: 0;
+        font-size: 18px;
+
+        &:hover {
+            background: pink;
+
+        }
+    }
+
+
+}
+
+.remove {
+    background: none;
+    border: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .box {
+
+        margin-bottom: 15px;
+        background-color: #f2e9e4;
+        color: black;
+        border-radius: 10px;
+
+        header {
+            font-family: 'anton';
+            letter-spacing: 2px;
+            font-size: 18px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .info {
+            padding: 20px;
+            font-size: 16px;
+
+            >div {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            button {
+                background: transparent;
+                color: #ad2831;
+                border: 0;
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+            }
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #c9ada7;
+            font-size: 18px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+    }
+
+    >button {
+        color: rgb(99, 38, 18);
+        background: #ffebcd;
+        display: block;
+        width: 100%;
+        border: 0;
+        padding: 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    >button:hover{
+        color: chocolate;
+    }
+}
