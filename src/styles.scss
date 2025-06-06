@@ -130,7 +130,6 @@ table {
 .qty {
     background-color: #eee;
     display: inline-flex;
-    padding: 5px 0;
     justify-content: space-around;
     min-width: 60px;
     border-radius: 20px;
@@ -149,7 +148,7 @@ table {
         height: 100%;
 
         &:hover {
-            background: rgb(151, 146, 147);
+            background: rgb(200, 197, 198);
 
         }
     }
