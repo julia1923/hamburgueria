@@ -1,12 +1,77 @@
-# React + Vite
+# 🍔 Hamburgueria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é uma aplicação fictícia mas funcional de um site de hamburgueria na qual estou desenvolvendo e aprimorando no momento, criada com Vite + React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+---
+
+## 🚀 Funcionalidades
+
+- Página inicial com apresentação da marca
+- Catálogo de produtos
+- Apresentação “Sobre nós”
+- Informações para “Contato”
+- Carrinho com adição de itens, alteração de quantidade e exclusão de itens
+- Integração com MockAPI para simulação do BackEnd (requisições CRUD)
+
+---
+
+## 🧪 Tecnologias utilizadas
+
+- React.js
+
+- Vite
+
+- Axios
+
+- React Router
+
+- SweetAlert2
+
+- HTML5
+
+- CSS/SASS
+
+- MockAPI
+
+---
+
+## 🛠️ Como rodar o projeto localmente:
+
+### Pré-requisitos:
+
+- Node.js (versão 18 ou superior)
+
+- npm ou yarn
+
+### Passos
+
+```bash
+# Clone e repositório
+git clone https://github.com/julia1923/hamburgueria.git
+cd hamburgueria
+    
+# Instale as dependências
+npm install
+    
+# Inicie o projeto
+npm run dev
+    
+
+# Acesse no navegador:http://localhost:5173
+```    
+---
+
+## 📌 Melhorias para serem trabalhadas (roadmap)
+
+- Página de checkout com formulário de pagamento
+- Persistencia de dados no localStorage
+- Tela de login
+- Responsividade
+- Deploy no Vercel
