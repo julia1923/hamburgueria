@@ -183,7 +183,7 @@ function Home() {
             </div>
 
             <div className="about-us">
-                <img src="/img/about.png" alt="" />
+                <img class="about-image" src="/img/about.png" alt="" />
                 <div className="text">
                     <h6>Preparando os <em>melhores</em> sanduíches, hot dogs e pastéis</h6>
                     <p>

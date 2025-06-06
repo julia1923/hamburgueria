@@ -6,7 +6,7 @@ const TableRow = ({item, handleRemoveItem, handleUpdateItem}) => {
         <tr>
             <td>
                 <div className="product">
-                    <img src={item.image} alt={item.name} style={{ width: '130px', height: '190', objectFit: 'cover' }} />
+                    <img src={item.image} alt={item.name} style={{ width: '130px', height: '100px', objectFit: 'cover' }} />
                     <div className="info">
                         <div className="name">{item.name}</div>
                         <div className="description">descrição</div>

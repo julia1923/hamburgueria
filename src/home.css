@@ -235,6 +235,10 @@ li {
   padding: 20px;
 }
 
+.about-image {
+    padding-top: 60px;
+}
+
 /* Contato */
 .contact {
   display: flex;
