@@ -1,280 +1,276 @@
-/* cabeçalho */
-
+/* Reset e Fontes */
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-}
-
-.swal-confirm-text {
-    color: chocolate;
-}
-
-@font-face {
-    font-family: "anton";
-    src: url('./fonts/anton/Anton.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "pacifico";
-    src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "amatic";
-    src: url('./fonts/Amatic/AmaticSC-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-#name-logo{
-    font-family: 'pacifico', sans-serif;
-}
-
-span {
-    font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'anton', sans-serif;
+  font-family: 'anton', sans-serif;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal-confirm-text {
+  color: chocolate;
+}
+
+@font-face {
+  font-family: "anton";
+  src: url('./fonts/anton/Anton.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "pacifico";
+  src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "amatic";
+  src: url('./fonts/Amatic/AmaticSC-Regular.ttf') format('truetype');
+}
+
+/* Cabeçalho */
+#name-logo {
+  font-family: 'pacifico', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 #logo {
-    width: 50px;
-    height: auto;
+  width: 50px;
+  height: auto;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.header *{
-    background-color: white;
+.header * {
+  background-color: white;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.cart-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
+.cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
-
 
 .nav li a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
 }
 
 li {
-    display: inline-block;
-    margin-left: 50px;
+  display: inline-block;
+  margin-left: 50px;
 }
 
-/* imagem principal */
-
+/* Imagem Principal */
 .main-img {
-    background-image: url(./img/hamb2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    padding-top: 120px;
-}  
+  background-image: url(./img/hamb2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+}
 
 .main-img h1 {
-    color: white;
-    padding-left: 50px;
-    font-size: 90px;
-    padding-top: 300px;
-    letter-spacing: 5px;
+  color: white;
+  padding-left: 50px;
+  padding-top: 300px;
+  font-size: 90px;
+  letter-spacing: 5px;
 }
 
-/* catálogo */
-
-.catalogo{
-    background-color: white;
-    width: 100%;
-    height: 750px;
+/* Catálogo */
+.catalogo {
+  background-color: white;
+  width: 100%;
+  height: 750px;
 }
 
-.row{
-    /* background-color: blanchedalmond; */
-    flex-direction: column;
-    display: flex;
-    width: 1200px;
-    height: 132px;
-    margin: 0 auto; /*centraliza dentro dos width 100% do pai (.catalogo)*/
-    margin-top: 50px;
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 132px;
+  padding-top: 50px;
+  margin: auto;
 }
 
-.row h1{
-    font-size: 60px;
-    letter-spacing: 6px;
+.row h1 {
+  font-size: 60px;
+  letter-spacing: 6px;
 }
 
-.carousel-window{
-    width: 1200px;
-    overflow: hidden;
-    margin: 0 auto;
+.carousel-window {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.stick-track{
-    width: max-content;
-    height: 468px;
-    margin: 0 auto;
-    display: flex;
-    gap: 30px;
-    overflow: hidden;
-    padding: 20px;
-    position: relative;
-    transition: transform 0.5s ease-in-out
+.stick-track {
+  width: max-content;
+  height: 468px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card {
-    height: 431px;
-    width: 270px;
-    text-align: center;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 431px;
+  width: 270px;
+  text-align: center;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card img{
-    width: 270px;
-    height: 176px;
-    object-fit: cover; /* Recorta o excesso se necessário (para que não fique achatada ou espichada). */
-    display: block;
+.card img {
+  width: 270px;
+  height: 176px;
+  object-fit: cover;
+  display: block;
 }
 
-.card h5{
-    font-size: 25px;
-    margin: 10px;
+.card h5 {
+  font-size: 25px;
+  margin: 10px;
 }
 
-.card p{
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+.card p {
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.card a{
-    color: black;
-    text-decoration: none;
+.card a {
+  color: black;
+  text-decoration: none;
 }
 
-.card button{
-    margin-top: 15px;
-    padding: 10px 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #ffebcd;
-    cursor: pointer;
-    color: rgb(99, 38, 18);
-    font-size: 15px;
-    font-weight: bolder;
+.card button {
+  margin-top: 15px;
+  padding: 10px 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffebcd;
+  cursor: pointer;
+  color: rgb(99, 38, 18);
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 .card button:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-    color: chocolate;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: chocolate;
 }
 
-.carousel-dots{
-    text-align: center;
-    margin-top: 10px;
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .carousel-dots .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: grey;
-    border: none;
-    cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: grey;
+  border: none;
+  cursor: pointer;
 }
 
 .carousel-dots .dot.active {
-    background: #000;
+  background: #000;
 }
 
-.about-us{
-    display: flex;
-    width: 1200px;
-    margin: 0 auto;
+/* Sobre Nós */
+.about-us {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
 }
 
-.about-us h6{
-    font-size: 45px;
-    letter-spacing: 3px;
-    padding: 30px;
+.about-us h6 {
+  font-size: 45px;
+  letter-spacing: 3px;
+  padding: 30px;
 }
 
-.about-us p{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
+.about-us p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
 }
 
+/* Contato */
 .contact {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: blanchedalmond;;
-    padding: 25px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: blanchedalmond;
+  padding: 25px 0;
 }
 
 #contato {
-    padding: 70px;
-    font-size: 60px;
-    text-align: center;
+  padding: 70px;
+  font-size: 60px;
+  text-align: center;
 }
 
-.info-contact, .address, .working-hours {
-    display: flex; /* propriedade que faz flex-direction: column funcionar */
-    flex-direction: column; /* propriedade que sozinha, não funciona (info ficam uma embaixo da*/
-    width: 400px;
-    height: auto;
+.info-contact,
+.address,
+.working-hours {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
 }
 
-.info-contact h6, .address h6, .working-hours h6 {
-    text-align: center;
-    font-size: 25px;
+.info-contact h6,
+.address h6,
+.working-hours h6 {
+  text-align: center;
+  font-size: 25px;
 }
 
 .sub-table {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact span {
-    margin: 10px 0px;
+  margin: 10px 0;
 }
