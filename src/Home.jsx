@@ -3,11 +3,35 @@ import { api } from './Provider';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { useEffect, useRef } from 'react';
 
 function Home() {
-    const navigate = useNavigate();
 
-        const products = [
+    //Lógica para a movimentação do carrossel
+    const trackRef = useRef(null);
+    const dotsRef = useRef([]);
+
+    useEffect(() => {
+        const track = trackRef.current;
+        const dots = dotsRef.current;
+
+        const cardsPerSlide = 4;
+        const cardWidth = 300;
+        const moveAmount = cardsPerSlide * cardWidth;
+
+        dots.forEach((dot, index) => {
+            if (!dot) return;
+            dot.onclick = () => {
+                if (track) {
+                    track.style.transform = `translateX(-${index * moveAmount}px)`;
+                    dots.forEach(d => d?.classList.remove('active'));
+                    dot.classList.add('active');
+                }
+            };
+        });
+}, []);
+
+    const products = [
         {
             name: "Burguer Buzz",
             price: 20.00,
@@ -76,19 +100,19 @@ function Home() {
     }
 
     //Alerta com sweetalert2
-const showAlert = () => {
-  Swal.fire({
-    title: 'Item adicionado ao carrinho!',
-    icon: 'success',
-    confirmButtonText: 'Ok',
-    background: '#f0f0f0',
-    color: '#333',
-    confirmButtonColor: '#ffebcd',
-    customClass: {
-    confirmButton: 'swal-confirm-text',
-    }
-  });
-};
+    const showAlert = () => {
+        Swal.fire({
+            title: 'Item adicionado ao carrinho!',
+            icon: 'success',
+            confirmButtonText: 'Ok',
+            background: '#f0f0f0',
+            color: '#333',
+            confirmButtonColor: '#ffebcd',
+            customClass: {
+                confirmButton: 'swal-confirm-text',
+            }
+        });
+    };
 
     return (
         <>
@@ -127,7 +151,7 @@ const showAlert = () => {
                 </div>
 
                 <div className="carousel-window">
-                    <div className="stick-track">
+                    <div className="stick-track" ref={trackRef}>
 
                         {products.map((product, index) => (
                             <div className="card" key={index}>
@@ -144,8 +168,17 @@ const showAlert = () => {
                 </div>
 
                 <div className="carousel-dots">
-                    <button className="dot active" data-index="0"></button>
-                    <button className="dot" data-index="1"></button>
+                    {[0, 1].map((i) => (
+                        <button
+                            key={i}
+                            className={`dot ${i === 0 ? 'active' : ''}`}
+                            data-index={i}
+                            ref={el => {
+                                if (el) dotsRef.current[i] = el;
+                            }}
+
+                        />
+                    ))}
                 </div>
             </div>
 
