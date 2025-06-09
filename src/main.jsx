@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import App from './App'; // Carrinho
+import App from './Cart'; // Carrinho
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,0 +1,273 @@
+/* Reset e Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'anton', sans-serif;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swal-confirm-text {
+  color: chocolate;
+}
+
+/* Cabeçalho */
+#name-logo {
+  font-family: 'pacifico', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#img-logo {
+  width: 50px;
+  height: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  * {
+    background-color: white;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav {
+      ul {
+        li {
+          display: inline-block;
+          margin-left: 50px;
+
+          a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .cart-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* Imagem Principal */
+.main-img {
+  background-image: url(./img/hamb2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  padding-top: 120px;
+
+  h1 {
+    color: white;
+    padding-left: 50px;
+    padding-top: 300px;
+    font-size: 90px;
+    letter-spacing: 5px;
+  }
+}
+
+/* Catálogo */
+.catalog {
+  background-color: white;
+  width: 100%;
+  height: 750px;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 132px;
+    padding-top: 50px;
+    margin: auto;
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 6px;
+    }
+  }
+}
+
+/* Carrossel */
+.carousel-window {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  .stick-track {
+    width: max-content;
+    height: 468px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .card {
+    height: 431px;
+    width: 270px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    img {
+      width: 270px;
+      height: 176px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h5 {
+      font-size: 25px;
+      margin: 10px;
+    }
+
+    p {
+      margin: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #ffebcd;
+      cursor: pointer;
+      color: rgb(99, 38, 18);
+      font-size: 15px;
+      font-weight: bolder;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        color: chocolate;
+      }
+    }
+  }
+}
+
+/* Botões Carrossel */
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: grey;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+
+    &.active {
+      background: #000;
+    }
+  }
+}
+
+/* Sobre Nós */
+.about-us {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+
+  h6 {
+    font-size: 45px;
+    letter-spacing: 3px;
+    padding: 30px;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+  }
+
+  .about-image {
+    padding-top: 60px;
+  }
+}
+
+/* Contato */
+.contact-title {
+  padding: 70px;
+  font-size: 60px;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: blanchedalmond;
+  padding: 25px 0;
+
+  span {
+    margin: 10px 0;
+  }
+
+  .info-contact,
+  .address,
+  .working-hours {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+
+    h6 {
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+
+  .sub-table {
+    display: flex;
+    justify-content: space-between;
+  }
+}

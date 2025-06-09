@@ -1,6 +1,5 @@
 @import url('https://cdn.boxicons.com/fonts/basic/boxicons.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Pixelify+Sans:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
@@ -29,7 +28,7 @@ body {
                 font-size: 40px;
                 padding: 50px 0;
                 text-align: center;
-                font-family: 'anton';
+                font-family: 'Anton';
             }
 
             .content {
@@ -56,20 +55,6 @@ button {
     cursor: pointer;
 }
 
-@font-face {
-    font-family: "anton";
-    src: url('./fonts/anton/Anton.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "pacifico";
-    src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -80,7 +65,7 @@ table {
         }
 
         th {
-            font-family: 'anton';
+            font-family: 'Anton';
             letter-spacing: 2px;
             padding-bottom: 16px;
             text-align: left;
@@ -117,7 +102,7 @@ table {
         margin-left: 20px;
 
         .name {
-            font-family: 'anton';
+            font-family: 'Anton';
             font-size: 20px;
             margin-bottom: 10px;
         }
@@ -183,7 +168,7 @@ aside {
         border-radius: 10px;
 
         header {
-            font-family: 'anton';
+            font-family: 'Anton';
             letter-spacing: 2px;
             font-size: 18px;
             padding: 15px 20px;

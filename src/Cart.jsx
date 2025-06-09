@@ -1,6 +1,6 @@
 import PageHeader from './layout/PageHeader';
-import './styles.scss';
-import TableRow from './TableRow';
+import './cart.scss';
+import TableRow from './layout/TableRow';
 import PageTitle from './layout/PageTitle';
 import Summary from './layout/Summary';
 import { useEffect, useState } from 'react';

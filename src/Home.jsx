@@ -1,4 +1,4 @@
-import './home.css';
+import './home.scss';
 import { api } from './Provider';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -119,7 +119,7 @@ function Home() {
             <header className="header">
                 <div className="container">
                     <div className="logo">
-                        <img id="logo" src="/img/logo.png" alt="" />
+                        <img id="img-logo" src="/img/logo.png" alt="" />
                         <p id="name-logo">Burguer & Co.</p>
                     </div>
 
@@ -144,7 +144,7 @@ function Home() {
             </div>
 
             {/* catalogo */}
-            <div className="catalogo">
+            <div className="catalog">
                 <div className="row">
                     <h1>Nosso catálogo</h1>
                     <p>Os melhores hambúrgueres artesanais estão apenas a um telefonema de distância de você!</p>
@@ -160,7 +160,7 @@ function Home() {
                                 <p>Best makers gonna make patties, romaine</p>
                                 <p><a href="#">Ler mais</a></p>
                                 <p><b>R$ {product.price.toFixed(2)}</b></p>
-                                <button className="buy-button" onClick={() => handleBuy(product)}>Comprar</button>
+                                <button onClick={() => handleBuy(product)}>Comprar</button>
                             </div>
                         ))}
 
@@ -183,7 +183,7 @@ function Home() {
             </div>
 
             <div className="about-us">
-                <img class="about-image" src="/img/about.png" alt="" />
+                <img className="about-image" src="/img/about.png" alt="" />
                 <div className="text">
                     <h6>Preparando os <em>melhores</em> sanduíches, hot dogs e pastéis</h6>
                     <p>
@@ -203,7 +203,7 @@ function Home() {
                 </div>
             </div>
 
-            <h1 id="contato">Contato</h1>
+            <h1 className='contact-title'>Contato</h1>
 
             <div className="contact">
                 <div className="info-contact">
