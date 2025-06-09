@@ -119,7 +119,7 @@ function Home() {
             <header className="header">
                 <div className="container">
                     <div className="logo">
-                        <img id="img-logo" src="/public/img/logo.png" alt="" />
+                        <img id="img-logo" src="/img/logo.png" alt="" />
                         <p id="name-logo">Burguer & Co.</p>
                     </div>
 
