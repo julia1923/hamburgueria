@@ -6,8 +6,7 @@ Esta é uma aplicação fictícia mas funcional de um site de hamburgueria na qu
 
 ## 📸 Preview
 
-
-
+![image](https://github.com/user-attachments/assets/b62b5f32-ca84-4415-b015-365bfda664eb)
 
 ---
 
