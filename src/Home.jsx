@@ -119,8 +119,7 @@ function Home() {
             <header className="header">
                 <div className="container">
                     <div className="logo">
-                        <img id="img-logo" src="/img/logo.png" alt="" />
-                        <img src="/img/homem-ferro.png" alt="Imagem de teste" style={{ width: '200px' }} />
+                        <img src="/img/logo.png" id="img-logo"  alt="" />
                         <p id="name-logo">Burguer & Co.</p>
                     </div>
 
