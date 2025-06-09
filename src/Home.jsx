@@ -139,7 +139,7 @@ function Home() {
                 </div>
             </header>
 
-            <div className="main-img" src="/img/ham2.jpg">
+            <div className="main-img" src="/img/hamb2.jpg">
                 <h1>HAMBÚRGUERES FEITOS<br />COM EXCELÊNCIA</h1>
             </div>
 
