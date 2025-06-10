@@ -1,6 +1,6 @@
 # 🍔 Hamburgueria
 
-Esta é uma aplicação fictícia mas funcional de um site de hamburgueria na qual estou desenvolvendo e aprimorando no momento, criada com Vite + React.
+Esta é uma aplicação fictícia mas funcional de um site de hamburgueria, criada com Vite + React.
 
 ---
 
@@ -73,4 +73,4 @@ npm run dev
 - Persistencia de dados no localStorage
 - Tela de login
 - Responsividade
-- Deploy no Vercel
+✅ Deploy no Vercel
