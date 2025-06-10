@@ -73,4 +73,5 @@ npm run dev
 - Persistencia de dados no localStorage
 - Tela de login
 - Responsividade
+
 ✅ Deploy no Vercel
