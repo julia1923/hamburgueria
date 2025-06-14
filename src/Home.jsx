@@ -3,7 +3,7 @@ import { api } from './Provider';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Home() {
 
@@ -31,6 +31,7 @@ function Home() {
         });
 }, []);
 
+    // Meus produtos
     const products = [
         {
             name: "Burguer Buzz",
@@ -80,7 +81,14 @@ function Home() {
             quantity: 1,
             image: '/img/card8.jpg',
         }
-    ] //meus produtos
+    ] 
+
+    // Lógica para a contagem do carrinho
+    const [cartCount, setCartCount] = useState(0);
+
+    const handleAddtoCart = () => {
+        setCartCount(prev => prev + 1);
+    }
 
     //Inserção do produto para o carrinho
     const handleBuy = async (product) => {
@@ -130,7 +138,7 @@ function Home() {
                             <li><a href="#">Contato</a></li>
                             <li>
                                 <Link to="/cart">
-                                    <button className="cart-btn">🛒<span id="cart-count">0</span></button>
+                                    <button className="cart-btn">🛒<span id="cart-count">{cartCount}</span></button>
                                 </Link>
                             </li>
                         </ul>
@@ -160,7 +168,7 @@ function Home() {
                                 <p>Best makers gonna make patties, romaine</p>
                                 <p><a href="#">Ler mais</a></p>
                                 <p><b>R$ {product.price.toFixed(2)}</b></p>
-                                <button onClick={() => handleBuy(product)}>Comprar</button>
+                                <button onClick={() => {handleBuy(product); handleAddtoCart();}}>Comprar</button>
                             </div>
                         ))}
 
