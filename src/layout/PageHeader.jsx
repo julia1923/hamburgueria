@@ -1,11 +1,14 @@
 import React from 'react';
 
 const PageHeader = () => {
-    return (
-        <header>
+  return (
+    <header>
+      <div className="logo">
+        <img id='img-logo' src="/img/logo.png" alt="" />
         <span>Burguer & Co.</span>
-      </header>
-    );
+      </div>
+    </header>
+  );
 };
 
 export default PageHeader;
