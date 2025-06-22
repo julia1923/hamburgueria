@@ -5,10 +5,9 @@ import PageTitle from './cart/PageTitle';
 import Summary from './cart/Summary';
 import { useEffect, useState } from 'react';
 import { api } from './Provider';
+import CartLoading from './CartLoading';
 
-
-
-function App() {
+function CartPage() {
   const [cart, setCart] = useState([]);
 
   const fetchData = () => {
@@ -71,28 +70,6 @@ function App() {
     return sum;
   };
 
-const overlayStyle = {
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  zIndex: 9999
-};
-
-const spinnerStyle = {
-  width: '60px',
-  height: '60px',
-  border: '6px solid #ccc',
-  borderTop: '6px solid #09f',
-  borderRadius: '50%',
-  animation: 'spin 1s linear infinite'
-};
-
   const cartTotal = getTotal();
 
   useEffect(() => {
@@ -106,38 +83,14 @@ const spinnerStyle = {
         <PageTitle />
         <div className="content">
           {isLoading && (
-                  <div style={overlayStyle}>
-                    <div style={spinnerStyle}></div>
-                  </div>
+                  <CartLoading/>
                 )}
           <section>
-            <table>
-              <thead>
-                <tr>
-                  <th>Produto</th>
-                  <th>Preco</th>
-                  <th>Quantidade</th>
-                  <th>Total</th>
-                  <th>-</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cart.map((item, index) => (
-                  <TableRow key={index} item={item}
-                    handleRemoveItem={handleRemoveItem}
-                    handleUpdateItem={handleUpdateItem}
-                  />
-                ))}
-                {cart.length === 0 && (
-                  <tr>
-                    <td colSpan='5' style={{ textAlign: 'center', fontFamily: 'Arial' }}>
-                      <b>Carrinho de compras vazio.</b>
-                    </td>
-                  </tr>
-                )}
-
-              </tbody>
-            </table>
+            <CartLoading
+            cart={cart}
+            handleRemoveItem={handleRemoveItem}
+            handleUpdateItem={handleUpdateItem}
+            ></CartLoading>
           </section>
           <aside>
             <Summary total={cartTotal} />
@@ -148,4 +101,4 @@ const spinnerStyle = {
   );
 }
 
-export default App;
+export default CartPage;
