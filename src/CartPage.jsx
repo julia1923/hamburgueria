@@ -1,36 +1,31 @@
 import PageHeader from './cart/PageHeader';
 import './cart.scss';
-import TableRow from './cart/TableRow';
 import PageTitle from './cart/PageTitle';
 import Summary from './cart/Summary';
 import { useEffect, useState } from 'react';
 import { api } from './Provider';
-import CartLoading from './CartLoading';
+import CartLoading from './cart/CartLoading';
+import CartTable from './cart/CartTable';
 
 function CartPage() {
   const [cart, setCart] = useState([]);
 
   const fetchData = () => {
-    api.get('/cart').then((response) => setCart(response.data));
-  }
-
-  //Remove item
+    return api.get('/cart').then((response) => setCart(response.data));
+  };
 
     //Criando um estado para controlar o carregamento
-
   const [isLoading, setIsLoading] = useState(false);
-  
+
+  //Remove item
   const handleRemoveItem = (item) => {
 
     setIsLoading(true);
 
-    console.log('disparou handleRemoveItem');
-    console.log({ item });
-    api.delete(`/cart/${item.id}`).then(response => {
-      console.log(response);
-      fetchData();
-
-      setIsLoading(false);
+    api.delete(`/cart/${item.id}`).then(() => {
+      fetchData().then(() =>{
+        setIsLoading(false);
+      });
     });
   };
 
@@ -50,19 +45,17 @@ function CartPage() {
 
     const newData = { ...item, quantity: newQuantity }
     delete newData.id;
-    console.log(newData);
-    api.put(`/cart/${item.id}`, newData).then((response) => {
-      console.log(response);
-      fetchData();
-    }
-    )
+
+    api.put(`/cart/${item.id}`, newData).then(() => {
+      fetchData().then(() =>{
+        setIsLoading(false);
+      });
+    });
   };
 
   //Altera o total em aside
   const getTotal = () => {
     let sum = 0;
-
-    console.log('Get total');
 
     for (let item of cart) {
       sum += item.price * item.quantity;
@@ -86,11 +79,11 @@ function CartPage() {
                   <CartLoading/>
                 )}
           <section>
-            <CartLoading
+            <CartTable
             cart={cart}
             handleRemoveItem={handleRemoveItem}
             handleUpdateItem={handleUpdateItem}
-            ></CartLoading>
+            ></CartTable>
           </section>
           <aside>
             <Summary total={cartTotal} />

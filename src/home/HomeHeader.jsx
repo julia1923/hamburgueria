@@ -15,9 +15,9 @@ export const HomeHeader = ({cartCount}) => {
     
                         <nav className="nav">
                             <ul>
-                                <li><a href="#">Cardápio</a></li>
-                                <li><a href="#">Sobre</a></li>
-                                <li><a href="#">Contato</a></li>
+                                <li><a href="#cardapio">Cardápio</a></li>
+                                <li><a href="#sobre">Sobre</a></li>
+                                <li><a href="#contato">Contato</a></li>
                                 <li>
                                     <Link to="/cart">
                                         <button className="cart-btn">🛒<span id="cart-count">{cartCount}</span></button>

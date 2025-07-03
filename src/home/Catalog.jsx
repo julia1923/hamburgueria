@@ -119,7 +119,7 @@ export const Catalog = ({setCartCount}) => {
 }, []);
 
   return (
-    <div className="catalog">
+    <div id='cardapio' className="catalog">
                 <div className="row">
                     <h1>Nosso catálogo</h1>
                     <p>Os melhores hambúrgueres artesanais estão apenas a um telefonema de distância de você!</p>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div id='sobre' className="about-us">
                 <img className="about-image" src="/img/about.png" alt="" />
                 <div className="text">
                     <h6>Preparando os <em>melhores</em> sanduíches, hot dogs e pastéis</h6>

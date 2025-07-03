@@ -1,4 +1,5 @@
 import React from 'react'
+import TableRow from './TableRow';
 
 export const CartTable = ({cart, handleRemoveItem, handleUpdateItem}) => {
   return (
